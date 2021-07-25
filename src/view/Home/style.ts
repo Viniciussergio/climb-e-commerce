@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 import bgMainPage from '../../assets/images/bg1.jpg';
+import bgShoePage from '../../assets/images/bg2.jpg';
+import bgPackPage from '../../assets/images/bg3.jpg';
+
+
 
 export const MainPage = styled.section`
     height: 100vh;
@@ -24,7 +28,7 @@ export const SalesPage = styled.section`
     }
 `
 
-export const Container = styled.div`
+export const ShoeContainer = styled.div`
     height: 100%;
     width: 80%;
     margin: auto;
@@ -35,20 +39,53 @@ export const Container = styled.div`
 
         justify-content: space-between;
 
-        height: 78%;
+        height: 80%;
         width: 100%;
         border-radius: 12px;
         display: flex;
-        background: pink;
+        background-image: url(${bgShoePage});
 
         .product-content{
-            margin: 4px;
+            margin: 13px;
             display:grid;
             justify-content: center;
             text-align: center;
-            height: 300px;
-            width: 300px;
-            background: rgba(255, 255, 255, 0.9);
+            height: 280px;
+            width: 280px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            padding: 12px;
+        }
+    }
+`
+
+export const PackContainer = styled.div`
+    height: 100%;
+    width: 80%;
+    margin: auto;
+
+    section {
+        display: grid;
+        flex-wrap: wrap;
+
+        justify-content: space-between;
+
+        height: 80%;
+        width: 100%;
+        border-radius: 12px;
+        display: flex;
+        background-image: url(${bgPackPage});
+        background-position: center;
+        background-size: cover;
+
+        .product-content{
+            margin: 13px;
+            display:grid;
+            justify-content: center;
+            text-align: center;
+            height: 280px;
+            width: 280px;
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 12px;
             padding: 12px;
         }

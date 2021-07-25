@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './style';
-import { produtos } from './test';
+import { sapatilha, mochilas } from './test';
 
 interface IProduct {
     id: number;
@@ -11,19 +11,26 @@ interface IProduct {
 }
 
 const Home: React.FC = () => {
-    const [data, setData] = useState<IProduct[]>([]);
+    const [shoes, setShoes] = useState<IProduct[]>([]);
+    const [packs, setPacks] = useState<IProduct[]>([]);
 
     useEffect(() => {
-        setData(produtos);
+        setShoes(sapatilha);
+        setPacks(mochilas);
     }, []);
     
-    console.log(data);
-    console.log(produtos);
+    console.log(shoes);
 
-    const handleCart = (index: number) => {
-        const productStore = JSON.stringify(data[index]);
+    const handleShoeCart = (index: number) => {
+        const productStore = JSON.stringify(shoes[index]);
 
-        localStorage.setItem(`@Produto-${index}`, productStore);
+        localStorage.setItem(`@Produto-Sapatilha(${index})`, productStore);
+    }
+
+    const handlePackCart = (index: number) => {
+        const productStore = JSON.stringify(packs[index]);
+
+        localStorage.setItem(`@Produto-Mochila(${index})`, productStore);
     }
 
     return (
@@ -45,25 +52,36 @@ const Home: React.FC = () => {
             </S.MainPage>
 
             <S.SalesPage>
-                <S.Container>
+                <S.ShoeContainer>
                     <h1>Sapatilhas</h1>
                     <section >
-                        {data.map((prod, index) => (
+                        {shoes.map((prod, index) => (
                             <div className="product-content" key={prod.id}>
                                 <img src={prod.photo} alt="iphone" width="200px" height="auto"/>
                                 <h4>{prod.name}</h4>
                                 <span>{prod.description}</span>
                                 <h6>{prod.price}</h6>
-                                <button onClick={() => handleCart(index)}>Adicionar ao Carrinho</button>
+                                <button onClick={() => handleShoeCart(index)}>Adicionar ao Carrinho</button>
                             </div>
                         ))}
                     </section>
-                </S.Container>
+                </S.ShoeContainer>
             </S.SalesPage>
             <S.SalesPage>
-                <S.Container>
+                <S.PackContainer>
                     <h1>Mochilas</h1>
-                </S.Container>
+                    <section >
+                        {packs.map((prod, index) => (
+                            <div className="product-content" key={prod.id}>
+                                <img src={prod.photo} alt="iphone" width="200px" height="auto"/>
+                                <h4>{prod.name}</h4>
+                                <span>{prod.description}</span>
+                                <h6>{prod.price}</h6>
+                                <button onClick={() => handlePackCart(index)}>Adicionar ao Carrinho</button>
+                            </div>
+                        ))}
+                    </section>
+                </S.PackContainer>
             </S.SalesPage>
         </>
     );
