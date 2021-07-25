@@ -1,17 +1,18 @@
 import styled from 'styled-components';
-import img from '../../assets/images/bg1.jpg';
+import bgMainPage from '../../assets/images/bg1.jpg';
+import bgShoesContainer from '../../assets/images/bg2.jpg';
 
 export const MainPage = styled.section`
     height: 100vh;
     width: 100%;
-    background-image: url(${img});
+    background-image: url(${bgMainPage});
 
     margin: 0px;
     padding: 0px;
 `
 
 export const SalesPage = styled.section`
-    height: 200vh;
+    height: 100vh;
     width: 100%;
 
     margin: 0px;
@@ -19,11 +20,12 @@ export const SalesPage = styled.section`
 
     h1 {
         font-size: 70px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
     }
 `
 
 export const Container = styled.div`
-    height: 50%;
+    height: 100%;
     width: 80%;
     margin: auto;
 
@@ -35,9 +37,9 @@ export const Container = styled.div`
 
         height: 78%;
         width: 100%;
-        background: white;
         border-radius: 12px;
         display: flex;
+        background: pink;
 
         .product-content{
             margin: 4px;
@@ -46,7 +48,7 @@ export const Container = styled.div`
             text-align: center;
             height: 300px;
             width: 300px;
-            background: #e2e2;
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 12px;
             padding: 12px;
         }

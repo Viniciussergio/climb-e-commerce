@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './style';
 import api from '../../services/api';
+import { produtos } from './test';
 
 interface IProduct {
     id: number;
@@ -14,16 +15,13 @@ const Home: React.FC = () => {
     const [data, setData] = useState<IProduct[]>([]);
 
     useEffect(() => {
-        api.get('').then(
-            response => {
-                setData(response.data);
-            }
-        );
+        setData(produtos);
     }, []);
 
     const item1 = data[0];
-
-    console.log(item1);
+    
+    console.log(data);
+    console.log(produtos);
 
     const handleCart = (index: number) => {
         const productStore = JSON.stringify(data[index]);
@@ -51,7 +49,7 @@ const Home: React.FC = () => {
 
             <S.SalesPage>
                 <S.Container>
-                <h1>Sapatilhas</h1>
+                    <h1>Sapatilhas</h1>
                     <section >
                         {data.map((prod, index) => (
                             <div className="product-content" key={prod.id}>
@@ -63,6 +61,11 @@ const Home: React.FC = () => {
                             </div>
                         ))}
                     </section>
+                </S.Container>
+            </S.SalesPage>
+            <S.SalesPage>
+                <S.Container>
+                    <h1>Mochilas</h1>
                 </S.Container>
             </S.SalesPage>
         </>
