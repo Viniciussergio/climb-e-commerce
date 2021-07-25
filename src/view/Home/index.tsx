@@ -16,8 +16,6 @@ const Home: React.FC = () => {
     useEffect(() => {
         setData(produtos);
     }, []);
-
-    const item1 = data[0];
     
     console.log(data);
     console.log(produtos);
