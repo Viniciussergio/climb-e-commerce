@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './style';
 import api from '../../services/api';
-import { url } from 'inspector';
 
 interface IProduct {
     id: number;
