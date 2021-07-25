@@ -20,8 +20,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "yarn server & react-scripts start",
+    "build": "yarn server & react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "json-server server.json -w -p 8888"

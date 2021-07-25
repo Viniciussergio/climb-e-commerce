@@ -51,8 +51,8 @@ const Home: React.FC = () => {
             </S.MainPage>
 
             <S.SalesPage>
-                <h1>Sapatilhas</h1>
                 <S.Container>
+                <h1>Sapatilhas</h1>
                     <section >
                         {data.map((prod, index) => (
                             <div className="product-content" key={prod.id}>

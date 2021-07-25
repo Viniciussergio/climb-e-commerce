@@ -18,8 +18,7 @@ export const SalesPage = styled.section`
     padding: 0px;
 
     h1 {
-        font-size: 50px;
-        text-align: center;
+        font-size: 70px;
     }
 `
 
@@ -36,7 +35,7 @@ export const Container = styled.div`
 
         height: 78%;
         width: 100%;
-        background: #e3e2;
+        background: white;
         border-radius: 12px;
         display: flex;
 
@@ -47,7 +46,7 @@ export const Container = styled.div`
             text-align: center;
             height: 300px;
             width: 300px;
-            background: #fff;
+            background: #e2e2;
             border-radius: 12px;
             padding: 12px;
         }
