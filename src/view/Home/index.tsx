@@ -39,14 +39,16 @@ const Home: React.FC = () => {
                 <S.Header role="banner">
                     <div className="logo-div">
                         <div>
-                            LOGO
+                            <img 
+                            src="https://jobs.gama.academy/assets/novo-logo-horizontal-b27eeb6004e3ed7893043bc7a077c267080ebc34a7054e2550367534ca831a6b.png" 
+                            alt="Logo" />
                         </div>
                     </div>
                     <div className="menu-div">
-                        <div className="menu-items"> Saiba mais </div>
-                        <div className="menu-items"> Home </div>
-                        <div className="menu-items"> Compras </div>
-                        <div className="menu-items"> Perfil </div>
+                        <a href="/" className="menu-items"> Saiba mais </a>
+                        <a href="/" className="menu-items"> Home </a>
+                        <a href="/" className="menu-items"> Compras </a>
+                        <a href="/" className="menu-items"> Perfil </a>
                     </div>
                 </S.Header>
             </S.MainPage>

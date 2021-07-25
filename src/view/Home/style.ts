@@ -103,18 +103,22 @@ export const Header = styled.header`
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: 30px;
+        margin-left: 0px;
 
         height: 100%;
         font-weight: 900;
         font-size: 50px;
         color: white;
-        border: solid 2px white;
 
         div {
             height: 60%;
-            margin-left: 50px;
+            margin-left: 0px;
             margin-right: 50px;
+
+            img {
+                width: 350px;
+                height: auto;
+            }
         }
     }
 
@@ -124,6 +128,7 @@ export const Header = styled.header`
         justify-content: space-around;
         height: 100%;
         margin-right: 30px;
+        margin-top: 55px;
 
         .menu-items {
             display: flex;
@@ -136,6 +141,7 @@ export const Header = styled.header`
             font-weight: 900;
 
             text-align: center;
+            text-decoration: none;
             font-size: 30px;
         }
     }
