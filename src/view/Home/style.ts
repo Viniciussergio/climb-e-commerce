@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import bgMainPage from '../../assets/images/bg1.jpg';
-import bgShoesContainer from '../../assets/images/bg2.jpg';
 
 export const MainPage = styled.section`
     height: 100vh;
