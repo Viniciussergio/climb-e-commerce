@@ -20,6 +20,7 @@ export const SalesPage = styled.section`
 
     h1 {
         font-size: 70px;
+        font-weight: 900;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
     }
 `
